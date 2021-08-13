@@ -1,9 +1,13 @@
 # Redux Starter Code - Boiler Plate
 
 1. run `npm install` to get started 
-1. run `npm i redux react-redux` (gets access to the store to all of your components)
-1. run `npm start` to start server
-1. In index.js, insert `import { Provider } from 'react-redux'` because in order to give access to our store to our components, we bring in `Provider` from react-redux. We'll wrap `App` with the `Provider`. !!!PROVIDER WILL GIVE ACCESS TO THE STORE.!!!
+2. run `npm i redux react-redux` (gets access to the store to all of your components)
+3. run `npm start` to start server
+4. In index.js, insert `import { Provider } from 'react-redux'` because in order to give access to our store to our components, we bring in `Provider` from react-redux. We'll wrap `App` with the `Provider`. !!!PROVIDER WILL GIVE ACCESS TO THE STORE.!!!
+5. To give this provider a store, we have to create one. We'll insert the following in index.js: `import { createStore } from 'redux'`.
+6. We'll bring in store by creating `const store = createStore(() => {})`. `createStore` takes in as an argument is a reducer. Reducers have to be functions. For right now, we'll plug in a random function just to stop it from breaking.
+7. Once our store is create, we can pass that onto our `provider`. We pass it as a prop. Like so: `<Provider store={store}>`.
+8. `console.log` store and check in your browser. You should see an object that has functions in there. Like: dispatch, getState, replaceReducer, etc. This is what our store looks like.
 
 # REDUX
 
